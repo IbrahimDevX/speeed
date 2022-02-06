@@ -366,6 +366,15 @@ function initUI(){
 		IP Address: <span id="ip"></span>
 	</div>
 </div>
+	<scripttype="text/javascript">
+  $.getJSON("http://jsonip.com?callback=?", function (response) {
+      $("#ip").text(response.ip);
+  });
+  $.get("http://ipinfo.io", function(response) {
+      $("#ip1").text(response.ip);
+  }, "jsonp");
+</script>
+	
 <div id="startStopBtn" onclick="startStop()"></div>
 <script type="text/javascript">setPageTitle();</script>
 <script type="text/javascript">setTimeout(initUI,100);</script>

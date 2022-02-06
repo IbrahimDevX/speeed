@@ -366,7 +366,7 @@ function initUI(){
 		IP Address: <span id="ip"></span>
 	</div>
 </div>
-	<scripttype="text/javascript">
+	<script type="text/javascript">
   $.getJSON("http://jsonip.com?callback=?", function (response) {
       $("#ip").text(response.ip);
   });
